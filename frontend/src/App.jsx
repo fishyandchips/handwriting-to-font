@@ -31,6 +31,16 @@ function App() {
           ` ~ ! @ # $ % ^ & * ( ) - _ = + [ ] { } \ | ; : ' " , &lt; . &gt; / ?
         </div>
       </div>
+
+      <div className="bg-[#25353C] p-[6rem] relative">
+        <div className="text-[#FF6161] text-[2.5rem] select-none">preview text</div>
+        <div className="bg-[#FFFFFF] w-full h-[80vh] mt-7 rounded-[3rem] p-[2rem]">
+          <input placeholder="type/paste your text here" className="w-full text-[2rem] rounded-[1rem] p-[1rem] border border-[#3B3B3B] placeholder-gray-500 focus:border-black"></input>
+        </div>
+        <div className="flex justify-center">
+          <button className="bg-[#FF6161] text-[2rem] text-[#FFFFFF] font-bold p-[2rem] rounded-[2rem] mt-10 mx-auto hover:bg-[#E85555]">Download font</button>
+        </div>
+      </div>
     </>
   )
 }
