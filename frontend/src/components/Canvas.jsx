@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 
-function Canvas() {
+const Canvas = ({rows, cols}) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -72,9 +72,19 @@ function Canvas() {
     canvas.addEventListener("pointerup", stopDrawing);
   }, []);
 
+  const canvasHeight = `calc(100% / ${rows})`;
+  const canvasWidth = `calc(100% / ${cols})`;
+
   return (
-    <canvas ref={canvasRef} className="absolute top-[10rem] left-0 bg-transparent opacity-100 z-[10] touch-none h-[calc(92%-10rem)] w-full"/>
+    <canvas
+      ref={canvasRef}
+      className="bg-transparent opacity-100 z-[10] touch-none"
+      style={{
+        height: canvasHeight,
+        width: canvasWidth,
+      }}
+    />
   );
-}
+};
 
 export default Canvas;
